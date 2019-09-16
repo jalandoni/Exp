@@ -10,7 +10,7 @@ app.all('/', function (req, res) {
 });
 
 app.all('/enroll', function (req, res) {
-    res.sendFile(__dirname + '/main/index.html');
+    // res.sendFile(__dirname + '/main/index.html');
     enroll.enrollStudent(req,res);
     
  });

@@ -31,47 +31,47 @@
         <div class="col-md-6 ">
             <br><br>
             <div class="form">
-            <div class=" card container">
-                <br>
-                <img src="https://www.macmout.com/image/online-application-form.png">
-                <div class="form-group">
-                    <label>Subject</label>
-                    <input type="text" id="subject" class="form-control supF" required>
-                </div> 
-                <div class="form-group ">
-                    <label>Name</label>
-                    <input type="text" id="name" class="form-control supF" required>
-                </div>                   
-                <div class="form-group">
+                <div class=" card container">
+                    <br>
+                    <img src="https://www.macmout.com/image/online-application-form.png">
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" id="subject" class="form-control supF" required>
+                    </div>
+                    <div class="form-group ">
+                        <label>Name</label>
+                        <input type="text" id="name" class="form-control supF" required>
+                    </div>
+                    <div class="form-group">
                         <label for="email" class="bmd-label-floating">Email</label>
                         <input type="email" class="form-control supF" id="email" required>
                     </div>
-                 <div class="form-group">
-                    <label>Course and Year</label>
-                    <input type="text" id="cy" class="form-control s" required>
+                    <div class="form-group">
+                        <label>Course and Year</label>
+                        <input type="text" id="cy" class="form-control s" required>
+                    </div>
+                    <center>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-primary save btn-outline-success" data-toggle="button"
+                            aria-pressed="false" id="enroll" autocomplete="off">Enroll
+
+                        </button>
+
+                    </center>
+
+                    <br>
+                    <br>
                 </div>
-                <center>
-                    <br>
-                    <br>
-                    <button type="button" class="btn btn-primary save btn-outline-success" data-toggle="button"
-                        aria-pressed="false" id="enroll" autocomplete="off">Enroll
-
-                    </button>
-
-                </center>
-
-                <br>
-                <br>
             </div>
         </div>
-    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script>
-   
-    
+
+
     $(document).ready(function () {
-     
+
         $("#enroll").click(function () {
             var sub = $("#subject").val();
             var name = $("#name").val();
@@ -83,10 +83,10 @@
                 crossDomain: true,
                 data: JSON.stringify({ sub1: sub, name1: name, email: eml, cy: cyr }),
                 error: function (request, error) {
-        console.log(arguments);
-        alert(" Can't do because: " + error);
-    },
-                
+                    console.log(arguments);
+                    alert(" Can't do because: " + error);
+                },
+
                 success: function (data) {
                     Swal.fire({
                         type: 'success',
