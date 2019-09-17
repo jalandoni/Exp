@@ -5,7 +5,7 @@ exports.enrollStudent = function (req, res) {
         var filename = data2.sub1.split(" ").join("-");
         fs.appendFile("./class/"+filename + ".csv", data2.sub1 + 
         "," + data2.name1 + "," + data2.email + "," + data2.cy + "\n", function (err) {
-            if (err) throw err;         
+        if (err) throw err;         
            res.end();
         
         });

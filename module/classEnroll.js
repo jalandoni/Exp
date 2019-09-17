@@ -24,7 +24,7 @@ exports.classEnroll = function (req, res) {
 
             content += '</table></center></div><div class="col-md-3"></div> </div></body></html>';
             res.write(content)
-            return res.end()
+            res.end()
 
 
         });

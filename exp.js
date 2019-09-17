@@ -1,7 +1,7 @@
 console.log("good");
 var express = require('express');
 var app = express();
-var enroll = require('./enrollStudent.js');
+var enroll = require('./module/enrollStudent.js');
 var table = require('./module/classEnroll.js');
 
 app.all('/', function (req, res) {
