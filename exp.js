@@ -6,13 +6,11 @@ var table = require('./module/classEnroll.js');
 
 app.all('/', function (req, res) {
    res.sendFile(__dirname + '/main/index.html');
-   enroll.enrollStudent(req,res);
+   
 });
 
 app.all('/enroll', function (req, res) {
-    // res.sendFile(__dirname + '/main/index.html');
-    enroll.enrollStudent(req,res);
-    
+    enroll.enrollStudent(req,res);   
  });
 
 
@@ -26,7 +24,7 @@ app.get('/class/:classname', function (req, res) {
 
 
  app.get('*',function(req,res){
-    res.send("Not found!");
+    res.send("<center>Not found!</center>");
 });
 
  

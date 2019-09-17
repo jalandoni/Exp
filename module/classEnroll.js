@@ -1,5 +1,5 @@
 exports.classEnroll = function (req, res) {    
-    var fs = require('fs');
+        var fs = require('fs');
         fs.readFile('./class/'+req+".csv", 'utf8', function (err, data) {
             if (err) {
                 res.writeHead(404, { 'Content-Type': 'text/html' });
